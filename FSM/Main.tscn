@@ -35,10 +35,8 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 [node name="Main" type="Node2D"]
 position = Vector2( 457, 438 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -5, -147 )
-
 [node name="Area2D" type="Area2D" parent="."]
+input_pickable = false
 
 [node name="ColorRect" type="ColorRect" parent="Area2D"]
 margin_left = -268.0
@@ -53,3 +51,6 @@ shape = SubResource( 1 )
 tile_set = SubResource( 3 )
 format = 1
 tile_data = PoolIntArray( -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2, -131 )

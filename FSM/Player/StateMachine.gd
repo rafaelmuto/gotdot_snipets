@@ -26,7 +26,6 @@ func _unhandled_input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	state.process(delta)
 
-
 func _physics_process(delta: float) -> void:
 	state.physics_process(delta)
 
