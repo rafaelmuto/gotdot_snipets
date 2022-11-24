@@ -86,7 +86,8 @@ script = ExtResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -6 )
 frames = SubResource( 7 )
-animation = "Run"
+animation = "Idle"
+frame = 1
 playing = true
 offset = Vector2( 0, -0.5 )
 
@@ -96,6 +97,7 @@ shape = SubResource( 8 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 2 )
+initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 3 )
