@@ -8,6 +8,11 @@ func enter(_msg := {}) -> void:
 
 
 func process(_delta: float) -> void:
+	if Input.is_action_pressed("ui_left"):
+		player.animatedSprite.flip_h = true
+	if Input.is_action_pressed("ui_right"):
+		player.animatedSprite.flip_h = false
+	
 	player.animatedSprite.play('Idle')
 	
 	# If you have platforms that break when standing on them, you need that check for 

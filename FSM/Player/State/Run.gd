@@ -1,7 +1,14 @@
 extends State
 
 func process(_delta: float) -> void:
-	player.animatedSprite.play('Run')
+	
+	if Input.is_action_pressed("ui_left"):
+		player.animatedSprite.flip_h = true
+	if Input.is_action_pressed("ui_right"):
+		player.animatedSprite.flip_h = false
+		
+	player.animatedSprite.play("Run")
+	
 
 func physics_process(delta: float) -> void:
 	if not player.is_on_floor():
